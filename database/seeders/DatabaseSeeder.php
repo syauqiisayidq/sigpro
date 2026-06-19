@@ -16,10 +16,11 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password'),
         ]);
 
-        // 2. Panggil semua Seeder yang sudah dibuat
+        // 2. Panggil semua Seeder cukup SATU KALI saja
         $this->call([
             SupplierSeeder::class,
             BarangSeeder::class,
+            // KonsumenSeeder::class, // Uncomment kalau sudah buat file-nya
             PembelianSeeder::class,
             PembayaranHutangSeeder::class,
         ]);
